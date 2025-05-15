@@ -20,8 +20,8 @@ const projects = [
     description: "An e-commerce website with product catalog, shopping cart, and secure checkout functionality. Includes user authentication and product filtering.",
     image: "/images/e-commerce-app.png",
     tags: ["React.js","Node.js",  "Express.js", "MongoDB", "Redux  Toolkit"],
-    github: "https://github.com/abdullah-kz17/ecommerce-platform",
-    demo: "https://ecommerce-demo.vercel.app",
+    github: "https://github.com/abdullah-kz17/MERN-Ecommerce-App",
+    demo: "https://mern-ecommerce-app-beta.vercel.app/",
     featured: true
   },
   {
