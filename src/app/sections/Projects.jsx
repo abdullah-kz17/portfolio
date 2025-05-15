@@ -30,7 +30,7 @@ const projects = [
     image: "/images/portfolio.png",
     tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/abdullah-kz17/portfolio",
-    demo: "https://abdullah-portfolio.vercel.app",
+    demo: "https://abdullah-portfolio-weld-tau.vercel.app/",
     featured: true
   },
   {
