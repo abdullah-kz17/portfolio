@@ -7,7 +7,7 @@ import { FiBriefcase, FiCalendar, FiMapPin } from 'react-icons/fi';
 const experiences = [
   {
     title: "MERN Stack Intern",
-    company: "InfoTech",
+    company: "InfoTech Group",
     location: "Lahore, Pakistan",
     period: "March 2025 - May 2025",
     description: [
