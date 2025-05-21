@@ -22,7 +22,6 @@ export default function About() {
         </motion.h2>
 
         <div className="flex flex-col md:flex-row gap-10 items-center">
-          {/* Left Section - Profile Card */}
           <motion.div
             className="w-full md:w-1/3"
             initial={{ opacity: 0, x: -50 }}
@@ -42,9 +41,7 @@ export default function About() {
               <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-lg blur opacity-25"></div>
               <div className="relative bg-white dark:bg-dark-300 p-6 rounded-lg shadow-xl">
                 <div className="aspect-square w-full rounded-lg overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-dark-200 dark:to-dark-300 flex items-center justify-center">
-                  {/* Replace with actual image */}
-                  {/* <span className="text-8xl">👨‍💻</span> */}
-                  <Image 
+                  <Image
                     src="/images/profile.jpg" 
                     alt="Abdullah Khan" 
                     width={320} 
@@ -71,7 +68,6 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Right Section - Information Cards */}
           <motion.div
             className="w-full md:w-2/3"
             initial={{ opacity: 0, x: 50 }}

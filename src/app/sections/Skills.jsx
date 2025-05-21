@@ -8,21 +8,20 @@ import {
   FiDatabase, 
   FiTool
 } from 'react-icons/fi';
-import { 
-  SiReact, 
-  SiJavascript, 
-  SiHtml5, 
-  SiCss3, 
-  SiRedux, 
-  SiBootstrap, 
-  SiNodedotjs, 
-  SiExpress, 
-  SiMongodb, 
-  SiMysql, 
-  SiPython, 
-  SiGit, 
-  SiNpm, 
-  SiPostman
+import {
+  SiReact,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiRedux,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiMysql,
+  SiPython,
+  SiGit,
+  SiNpm,
+  SiPostman, SiTailwindcss, SiNumpy, SiPandas, SiChartdotjs
 } from 'react-icons/si';
 
 const frontendSkills = [
@@ -31,7 +30,7 @@ const frontendSkills = [
   { name: 'HTML5', icon: SiHtml5, level: 90 },
   { name: 'CSS3', icon: SiCss3, level: 80 },
   { name: 'Redux Toolkit', icon: SiRedux, level: 80 },
-  { name: 'Bootstrap', icon: SiBootstrap, level: 85 },
+  { name: 'Tailwind CSS', icon: SiTailwindcss, level: 85 },
 ];
 
 const backendSkills = [
@@ -44,8 +43,11 @@ const backendSkills = [
 
 const otherSkills = [
   { name: 'Python', icon: SiPython, level: 60 },
-  { name: 'Git', icon: SiGit, level: 65 },
+  { name: 'Numpy', icon: SiNumpy, level: 80 },
+  { name: 'Pandas', icon: SiPandas, level: 90 },
+  { name: 'Matplotlib', icon: SiChartdotjs, level: 70 },
   { name: 'NPM', icon: SiNpm, level: 70 },
+  { name: 'Git', icon: SiGit, level: 65 },
 ];
 
 const SkillCategory = ({ title, skills, icon, delay, isInView }) => {
