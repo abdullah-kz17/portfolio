@@ -9,7 +9,7 @@ const experiences = [
     title: "MERN Stack Intern",
     company: "InfoTech Group",
     location: "Lahore, Pakistan",
-    period: "March 2025 - May 2025",
+    period: "March 2025 - Present",
     description: [
       "Built Task Management Application with React.js frontend and Node.js/Express backend",
       "Developed E-Commerce Platform featuring user authentication, product catalog, and shopping cart functionality with secure checkout",
@@ -126,7 +126,7 @@ export default function Experience() {
               <p className="text-lg font-medium">University of Management and Technology, Lahore</p>
               <div className="flex items-center mt-2 text-sm text-gray-600 dark:text-gray-400">
                 <FiCalendar className="mr-2 w-4 h-4" />
-                <span>Currently in 8th Semester | CGPA: 3.2</span>
+                <span>Currently in 8th Semester | CGPA: 3.21</span>
               </div>
               <p className="mt-4 text-gray-700 dark:text-gray-300">
                 Bachelor of Computer Science (BSCS)
