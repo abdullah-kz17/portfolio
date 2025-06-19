@@ -45,6 +45,7 @@ const projects = [
   {
     title: "GharBaar Estate (Final Year Project)",
     description: "An AI-powered real estate web platform for buying, selling, and renovating homes. Unlike traditional platforms, it integrates intelligent renovation suggestions and personalized searching experience.",
+    image: "/images/gharbaar-estate.png",
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Redux Toolkit", "YOLOv5", "Flask", "OpenAI", "Maps API", "Computer Vision"],
     github: "https://github.com/abdullah-kz17/gharbaar",
     demo: "https://gharbaar.vercel.app",
