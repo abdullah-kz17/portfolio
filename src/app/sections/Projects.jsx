@@ -19,7 +19,7 @@ const projects = [
     title: "E-Commerce Platform",
     description: "An e-commerce website with product catalog, shopping cart, and secure checkout functionality. Includes user authentication and product filtering.",
     image: "/images/e-commerce-app.png",
-    tags: ["React.js","Node.js",  "Express.js", "MongoDB", "Redux  Toolkit"],
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Redux Toolkit"],
     github: "https://github.com/abdullah-kz17/MERN-Ecommerce-App",
     demo: "https://mern-ecommerce-app-beta.vercel.app/",
     featured: true
@@ -34,14 +34,24 @@ const projects = [
     featured: true
   },
   {
-    title: "GharBaar (Final Year Project)",
+    title: "Lost & Found Portal (TechVerse 2025)",
+    description: "A web-based campus Lost & Found system developed for TechVerse 2025. Allows users to report lost or found items, upload images, claim items securely, and communicate through real-time chat. Admin features include post approval and dispute resolution.",
+    image: "/images/lostAndFound.png",
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+    github: "https://github.com/abdullah-kz17/TechVerse-UMT",
+    demo: "https://tech-verse-umt.vercel.app/",
+    featured: true
+  },
+  {
+    title: "GharBaar Estate (Final Year Project)",
     description: "An AI-powered real estate web platform for buying, selling, and renovating homes. Unlike traditional platforms, it integrates intelligent renovation suggestions and personalized searching experience.",
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Redux Toolkit", "YOLOv5", "Flask", "OpenAI", "Maps API", "Computer Vision"],
     github: "https://github.com/abdullah-kz17/gharbaar",
     demo: "https://gharbaar.vercel.app",
     featured: false
-  }
+  },
 ];
+
 
 const ProjectCard = ({ project, index, isInView }) => {
   return (
