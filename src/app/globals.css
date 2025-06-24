@@ -92,3 +92,12 @@
 .btn-primary {
   @apply bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-xl transition;
 }
+
+html, body {
+  overflow-x: hidden;
+  /* Optionally hide vertical scrollbar visually, but allow scroll if needed */
+  scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

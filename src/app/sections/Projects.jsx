@@ -24,15 +24,7 @@ const projects = [
     demo: "https://mern-ecommerce-app-beta.vercel.app/",
     featured: true
   },
-  {
-    title: "Portfolio Website",
-    description: "A responsive portfolio website built with Next.js and Tailwind CSS, featuring smooth animations and dark mode.",
-    image: "/images/portfolio.png",
-    tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/abdullah-kz17/portfolio",
-    demo: "https://abdullah-portfolio-weld-tau.vercel.app/",
-    featured: true
-  },
+  
   {
     title: "Lost & Found Portal (TechVerse 2025)",
     description: "A web-based campus Lost & Found system developed for TechVerse 2025. Allows users to report lost or found items, upload images, claim items securely, and communicate through real-time chat. Admin features include post approval and dispute resolution.",
