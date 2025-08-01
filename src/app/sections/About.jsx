@@ -42,7 +42,7 @@ export default function About() {
               <div className="relative bg-white dark:bg-dark-300 p-6 rounded-lg shadow-xl">
                 <div className="aspect-square w-full rounded-lg overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-dark-200 dark:to-dark-300 flex items-center justify-center">
                   <Image
-                    src="/images/profile.jpg" 
+                    src="/images/profile.png" 
                     alt="Abdullah Khan" 
                     width={320} 
                     height={320} 

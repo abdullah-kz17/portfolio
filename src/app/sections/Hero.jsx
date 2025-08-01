@@ -163,7 +163,7 @@ export default function Hero() {
                   {/* <span className="text-6xl">👨‍💻</span> */}
                   {/* Alternatively, use an actual image: */}
                   <Image 
-                    src="/images/profile.jpg" 
+                    src="/images/profile.png" 
                     alt="Abdullah Khan" 
                     width={320} 
                     height={320} 
