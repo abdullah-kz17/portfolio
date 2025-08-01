@@ -75,7 +75,7 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
             >
-              MERN Stack Developer
+              MERN Stack AI Developer
             </motion.h2>
             
             <motion.p 

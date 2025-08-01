@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FiDownload, FiUser, FiCode, FiTarget } from 'react-icons/fi';
+import { FiDownload, FiUser, FiCode, FiTarget, FiBookOpen, FiAward } from 'react-icons/fi';
 import Image from 'next/image';
 
 export default function About() {
@@ -29,12 +29,12 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h3 className="text-2xl font-bold mb-6 gradient-text">
-              Detail-oriented React.js Developer with MERN stack experience
+              Computer Science Graduate with Full-Stack & AI/ML Expertise
             </h3>
             <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-              I'm a passionate developer focused on building responsive, user-friendly web applications
-              while continuously expanding my technical expertise. My journey in web development has equipped me
-              with strong problem-solving skills and attention to detail.
+              I'm a passionate developer with 1+ years of hands-on experience in full-stack development and machine learning. 
+              My journey in web development has equipped me with strong problem-solving skills and attention to detail, 
+              while my AI/ML projects demonstrate my ability to work with cutting-edge technologies.
             </p>
 
             <div className="relative">
@@ -53,8 +53,12 @@ export default function About() {
                 <div className="mt-6">
                   <h3 className="text-xl font-bold mb-2">Abdullah Khan</h3>
                   <p className="text-gray-600 dark:text-gray-400 mb-4">
-                    MERN Stack Developer based in Lahore, Pakistan
+                    Full-Stack Developer & AI/ML Engineer
                   </p>
+                  <div className="flex items-center mb-4 text-sm text-gray-600 dark:text-gray-400">
+                    <FiBookOpen className="w-4 h-4 mr-2 text-primary-500" />
+                    <span>CGPA: 3.23/4.0</span>
+                  </div>
                   <a
                     href="/documents/Abdullah_Khan_Resume.pdf"
                     download
@@ -77,27 +81,42 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <InfoCard
                 icon={<FiUser className="w-5 h-5" />}
-                title="Personal Background"
-                content="Based in Lahore, Pakistan, I'm currently pursuing my Bachelor's degree in Computer Science at the University of Management and Technology."
+                title="Educational Background"
+                content="Currently pursuing Bachelor's degree in Computer Science at University of Management and Technology, Lahore with a strong academic record."
               />
               <InfoCard
                 icon={<FiCode className="w-5 h-5" />}
-                title="Development Philosophy"
-                content="I believe in writing clean, maintainable code and creating intuitive user experiences that solve real-world problems."
+                title="Technical Expertise"
+                content="Proficient in MERN stack development with expertise in React.js, Node.js, and modern JavaScript frameworks. Experienced in AI/ML with Python, TensorFlow, and computer vision."
               />
               <InfoCard
                 icon={<FiTarget className="w-5 h-5" />}
                 title="Career Goals"
-                content="My aim is to contribute to innovative projects while continuing to expand my knowledge of both frontend and backend technologies."
+                content="Seeking a full-time Software Engineer role to leverage technical expertise in MERN stack and AI-driven applications while contributing to innovative development teams."
               />
               <InfoCard
-                icon={<FiCode className="w-5 h-5" />}
-                title="Technical Interests"
-                content="Beyond the MERN stack, I'm interested in data visualization, machine learning, and building accessible applications."
+                icon={<FiAward className="w-5 h-5" />}
+                title="Achievements"
+                content="Led cross-functional teams, built scalable web applications, and implemented AI/ML solutions including computer vision models with high accuracy rates."
               />
             </div>
 
-            <p className="text-gray-700 dark:text-gray-300 italic">
+            <div className="bg-gradient-to-r from-primary-500/10 to-secondary-500/10 p-6 rounded-lg border border-primary-500/20">
+              <h4 className="font-bold text-lg mb-3 gradient-text">Languages</h4>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-3 py-1 bg-primary-100 dark:bg-dark-300 text-primary-800 dark:text-primary-300 rounded-full text-sm">
+                  English (Proficient)
+                </span>
+                <span className="px-3 py-1 bg-secondary-100 dark:bg-dark-300 text-secondary-800 dark:text-secondary-300 rounded-full text-sm">
+                  Urdu (Native)
+                </span>
+                <span className="px-3 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-300 rounded-full text-sm">
+                  Punjabi (Intermediate)
+                </span>
+              </div>
+            </div>
+
+            <p className="text-gray-700 dark:text-gray-300 italic mt-6">
               I'm always open to new opportunities and collaborations. Feel free to reach out if you'd like to work together!
             </p>
           </motion.div>

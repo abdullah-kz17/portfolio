@@ -2,29 +2,34 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FiBriefcase, FiCalendar, FiMapPin } from 'react-icons/fi';
+import { FiBriefcase, FiCalendar, FiMapPin, FiAward } from 'react-icons/fi';
 
 const experiences = [
   {
-    title: "MERN Stack Intern",
+    title: "MERN Stack Development Intern",
     company: "InfoTech Group",
     location: "Lahore, Pakistan",
-    period: "March 2025 - Present",
+    period: "March 2025 – July 2025",
     description: [
-      "Built Task Management Application with React.js frontend and Node.js/Express backend",
-      "Developed E-Commerce Platform featuring user authentication, product catalog, and shopping cart functionality with secure checkout",
-      "Utilized MongoDB for database management and implemented RESTful API integration"
-    ]
+      "Completed comprehensive 5-month internship developing full-stack web applications using MERN stack",
+      "Built scalable Task Management App with user authentication, CRUD operations, and task filtering/sorting",
+      "Developed feature-rich E-Commerce Platform with secure checkout, admin dashboard, and product catalog",
+      "Integrated REST APIs and implemented efficient data management using MongoDB and Express.js",
+      "Received completion certificate recognizing technical proficiency and professional development"
+    ],
+    achievements: ["5-month comprehensive internship", "Certificate of completion", "Scalable applications built"]
   },
   {
     title: "Frontend Development Intern",
     company: "NexTash",
     location: "Lahore, Pakistan",
-    period: "July 2023 - July 2024",
+    period: "July 2023 – July 2024",
     description: [
-      "Created responsive landing pages and website clones using HTML, CSS, and JavaScript",
-      "Practiced with modern frontend frameworks including React.js for small-scale projects"
-    ]
+      "Designed and developed responsive landing pages and web applications using HTML5, CSS3, and JavaScript",
+      "Built interactive React.js projects focusing on component architecture and state management best practices",
+      "Collaborated with design teams to implement pixel-perfect UI/UX designs and ensure cross-browser compatibility"
+    ],
+    achievements: ["1-year internship", "UI/UX design implementation", "Cross-browser compatibility"]
   }
 ];
 
@@ -65,11 +70,27 @@ const ExperienceCard = ({ experience, index, isInView }) => {
           </div>
         </div>
 
-        <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+        <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-4">
           {experience.description.map((item, idx) => (
             <li key={idx}>{item}</li>
           ))}
         </ul>
+
+        {experience.achievements && (
+          <div className="mt-4 pt-4 border-t border-gray-200 dark:border-dark-300">
+            <div className="flex flex-wrap gap-2">
+              {experience.achievements.map((achievement, idx) => (
+                <span 
+                  key={idx}
+                  className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-100 dark:bg-dark-300 text-primary-800 dark:text-primary-300"
+                >
+                  <FiAward className="mr-1 w-3 h-3" />
+                  {achievement}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </motion.div>
   );
@@ -122,15 +143,28 @@ export default function Experience() {
             </div>
 
             <div className="bg-gradient-to-r from-secondary-500/20 to-secondary-500/5 dark:from-secondary-900/20 dark:to-secondary-900/5 p-6 rounded-lg">
-              <h3 className="text-xl font-bold gradient-text">Education</h3>
+              <div className="flex items-center mb-4">
+                <FiAward className="w-6 h-6 mr-3 text-secondary-500" />
+                <h3 className="text-xl font-bold gradient-text">Education</h3>
+              </div>
               <p className="text-lg font-medium">University of Management and Technology, Lahore</p>
               <div className="flex items-center mt-2 text-sm text-gray-600 dark:text-gray-400">
                 <FiCalendar className="mr-2 w-4 h-4" />
-                <span>Currently in 8th Semester | CGPA: 3.21</span>
+                <span>Nov 2021 – Jul 2025 | CGPA: 3.23/4.0</span>
               </div>
               <p className="mt-4 text-gray-700 dark:text-gray-300">
                 Bachelor of Computer Science (BSCS)
               </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-secondary-100 dark:bg-dark-300 text-secondary-800 dark:text-secondary-300">
+                  <FiAward className="mr-1 w-3 h-3" />
+                  Strong Academic Record
+                </span>
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-secondary-100 dark:bg-dark-300 text-secondary-800 dark:text-secondary-300">
+                  <FiAward className="mr-1 w-3 h-3" />
+                  Computer Science Focus
+                </span>
+              </div>
             </div>
           </motion.div>
         </div>

@@ -2,10 +2,40 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import {FiGithub, FiExternalLink, FiTag, FiLoader} from 'react-icons/fi';
+import {FiGithub, FiExternalLink, FiTag, FiLoader, FiAward, FiBrain} from 'react-icons/fi';
 
 // Project data
 const projects = [
+  {
+    title: "GharBaar Estate - AI-Powered Real Estate Platform",
+    description: "Led development of comprehensive real estate platform with AI-powered features and renovation marketplace. Achieved 98.22% validation accuracy with ResNet50-based deep learning model for renovation predictions.",
+    image: "/images/gharbaar-estate.png",
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Redux Toolkit", "YOLOv5", "Flask", "OpenAI", "Maps API", "Computer Vision"],
+    github: "https://github.com/abdullah-kz17/gharbaar",
+    demo: "https://gharbaar.vercel.app",
+    featured: true,
+    achievements: ["98.22% validation accuracy", "AI-powered features", "Team leadership"]
+  },
+  {
+    title: "Full-Stack E-Commerce Platform",
+    description: "Built complete online shopping platform with secure user authentication and authorization. Implemented comprehensive product management, shopping cart, and secure checkout system with admin panel.",
+    image: "/images/e-commerce-app.png",
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Redux Toolkit"],
+    github: "https://github.com/abdullah-kz17/MERN-Ecommerce-App",
+    demo: "https://mern-ecommerce-app-beta.vercel.app/",
+    featured: true,
+    achievements: ["Secure checkout", "Admin dashboard", "Inventory management"]
+  },
+  {
+    title: "Brain Tumor Detection System",
+    description: "Achieved 93% accuracy with Logistic Regression for brain tumor detection using MRI images. Implemented multiple ML approaches including CNN with TensorFlow/Keras and traditional algorithms.",
+    image: "/images/brain-tumor.jpg",
+    tags: ["Python", "TensorFlow", "OpenCV", "Scikit-learn", "CNN", "Machine Learning"],
+    github: "https://github.com/abdullah-kz17/brain-tumor-detection",
+    demo: null,
+    featured: true,
+    achievements: ["93% accuracy", "Multiple ML approaches", "CNN implementation"]
+  },
   {
     title: "Task Management Application",
     description: "A full-stack task management app built with React.js frontend and Node.js/Express backend. Features include user authentication, task creation, filtering, and progress tracking.",
@@ -13,38 +43,20 @@ const projects = [
     tags: ["React.js", "Node.js", "Express", "MongoDB", "Redux Toolkit"],
     github: "https://github.com/abdullah-kz17/MERN-Task-Management-App",
     demo: "https://mern-task-management-app.vercel.app/",
-    featured: true
+    featured: false,
+    achievements: ["User authentication", "CRUD operations", "Task filtering"]
   },
   {
-    title: "E-Commerce Platform",
-    description: "An e-commerce website with product catalog, shopping cart, and secure checkout functionality. Includes user authentication and product filtering.",
-    image: "/images/e-commerce-app.png",
-    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Redux Toolkit"],
-    github: "https://github.com/abdullah-kz17/MERN-Ecommerce-App",
-    demo: "https://mern-ecommerce-app-beta.vercel.app/",
-    featured: true
-  },
-  
-  {
-    title: "Lost & Found Portal (TechVerse 2025)",
-    description: "A web-based campus Lost & Found system developed for TechVerse 2025. Allows users to report lost or found items, upload images, claim items securely, and communicate through real-time chat. Admin features include post approval and dispute resolution.",
+    title: "Campus Lost & Found Portal",
+    description: "Developed campus-wide MERN stack platform for efficient lost item reporting and claiming. Implemented real-time email notifications using Nodemailer and advanced filtering system.",
     image: "/images/lostAndFound.png",
-    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Nodemailer"],
     github: "https://github.com/abdullah-kz17/TechVerse-UMT",
     demo: "https://tech-verse-umt.vercel.app/",
-    featured: true
-  },
-  {
-    title: "GharBaar Estate (Final Year Project)",
-    description: "An AI-powered real estate web platform for buying, selling, and renovating homes. Unlike traditional platforms, it integrates intelligent renovation suggestions and personalized searching experience.",
-    image: "/images/gharbaar-estate.png",
-    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Redux Toolkit", "YOLOv5", "Flask", "OpenAI", "Maps API", "Computer Vision"],
-    github: "https://github.com/abdullah-kz17/gharbaar",
-    demo: "https://gharbaar.vercel.app",
-    featured: false
+    featured: false,
+    achievements: ["4th position hackathon", "Real-time notifications", "Admin dashboard"]
   },
 ];
-
 
 const ProjectCard = ({ project, index, isInView }) => {
   return (
@@ -73,7 +85,6 @@ const ProjectCard = ({ project, index, isInView }) => {
         )}
       </div>
 
-
       <div className="p-6 flex-grow flex flex-col">
         <h3 className="text-xl font-bold mb-2">{project.title}</h3>
         <p className="text-gray-600 dark:text-gray-400 mb-4 flex-grow">{project.description}</p>
@@ -89,6 +100,25 @@ const ProjectCard = ({ project, index, isInView }) => {
             </span>
           ))}
         </div>
+
+        {project.achievements && (
+          <div className="mb-4">
+            <div className="flex items-center mb-2">
+              <FiAward className="w-4 h-4 mr-2 text-primary-500" />
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Key Achievements</span>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {project.achievements.map((achievement, idx) => (
+                <span 
+                  key={idx}
+                  className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-secondary-100 dark:bg-dark-300 text-secondary-800 dark:text-secondary-300"
+                >
+                  {achievement}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
         
         <div className="flex space-x-3">
           {project.github && (
@@ -142,7 +172,8 @@ export default function Projects() {
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Here are some of the projects I've worked on. Each project represents different skills and technologies I've used.
+          Here are some of the projects I've worked on. Each project represents different skills and technologies I've used, 
+          from full-stack development to AI/ML implementations.
         </motion.p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">

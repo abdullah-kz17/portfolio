@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiGithub } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiLinkedin, FiGithub, FiDownload } from 'react-icons/fi';
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
@@ -62,6 +62,15 @@ export default function Contact() {
           Contact Me
         </motion.h2>
 
+        <motion.p
+          className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          I'm always open to new opportunities and collaborations. Feel free to reach out for any inquiries or just to chat!
+        </motion.p>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 items-start">
           {/* Contact Info */}
           <motion.div
@@ -71,11 +80,32 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className="space-y-4 bg-gradient-to-br from-primary-50 to-primary-100 dark:from-dark-300 dark:to-dark-400 rounded-xl p-6 shadow-xl">
-              <ContactInfo icon={<FiMail />} label="Email" value="abdxllah.khan17@gmail.com" link="mailto:abd248778@gmail.com" />
+              <ContactInfo icon={<FiMail />} label="Email" value="abdxllah.khan17@gmail.com" link="mailto:abdxllah.khan17@gmail.com" />
               <ContactInfo icon={<FiPhone />} label="Phone" value="+92 346 0219660" link="tel:+923460219660" />
-              <ContactInfo icon={<FiMapPin />} label="Location" value="Lahore, Pakistan" />
+              <ContactInfo icon={<FiMapPin />} label="Location" value="Lahore, Punjab, Pakistan" />
               <ContactInfo icon={<FiLinkedin />} label="LinkedIn" value="linkedin.com/in/abdullah-khan-6ba998280" link="https://www.linkedin.com/in/abdullah-khan-6ba998280" />
               <ContactInfo icon={<FiGithub />} label="GitHub" value="github.com/abdullah-kz17" link="https://github.com/abdullah-kz17" />
+            </div>
+
+            <div className="bg-gradient-to-r from-secondary-500/10 to-secondary-500/5 dark:from-secondary-900/10 dark:to-secondary-900/5 p-6 rounded-lg border border-secondary-500/20">
+              <h4 className="font-bold text-lg mb-4 gradient-text">Quick Actions</h4>
+              <div className="space-y-3">
+                <a
+                  href="/documents/Abdullah_Khan_Resume.pdf"
+                  download
+                  className="flex items-center space-x-3 p-3 bg-white dark:bg-dark-300 rounded-lg hover:shadow-md transition-all duration-200 group"
+                >
+                  <FiDownload className="w-5 h-5 text-primary-500 group-hover:scale-110 transition-transform" />
+                  <span className="font-medium">Download Resume</span>
+                </a>
+                <a
+                  href="mailto:abdxllah.khan17@gmail.com"
+                  className="flex items-center space-x-3 p-3 bg-white dark:bg-dark-300 rounded-lg hover:shadow-md transition-all duration-200 group"
+                >
+                  <FiMail className="w-5 h-5 text-primary-500 group-hover:scale-110 transition-transform" />
+                  <span className="font-medium">Send Email</span>
+                </a>
+              </div>
             </div>
           </motion.div>
 
